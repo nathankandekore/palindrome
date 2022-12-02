@@ -14,7 +14,7 @@ class Main {
         boolean endProgram = false;
 
         while (endProgram == false) {
-            while (counter < length / 2) {
+            if (counter != length) {
                 if (word.charAt(counter) == word.charAt(length)) {
 
                     counter++;
@@ -27,11 +27,15 @@ class Main {
                     System.out.println("not a palindrome");
                 }
             }
+            if (counter == length) {
+                System.out.println("PALINDROME!!!!!!");
+            }
+
         }
 
-        if (counter > length && endProgram == false) {
-            System.out.println("PALINDROME!!!!!!");
-        }
+        // if (counter == length && endProgram == false) {
+        // System.out.println("PALINDROME!!!!!!");
+        // }
 
     }
 }
