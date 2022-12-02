@@ -9,12 +9,13 @@ class Main {
         System.out.println("enter your word: ");
         String word = System.console().readLine();
 
-        int length = word.length() - 1;
+        int length = word.length() - 1; // qwertytrewq = 10
+        double firstLength = word.length() - 1;
         int counter = 0;
         boolean endProgram = false;
 
         while (endProgram == false) {
-            if (counter != length) {
+            if (counter < firstLength / 2) {
                 if (word.charAt(counter) == word.charAt(length)) {
 
                     counter++;
@@ -29,6 +30,7 @@ class Main {
             }
             if (counter == length) {
                 System.out.println("PALINDROME!!!!!!");
+                endProgram = true;
             }
 
         }
